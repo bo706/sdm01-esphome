@@ -1,0 +1,424 @@
+# T6.3：公共 EMQX 8883。discovery false。不写 topic_prefix。不带本机账号。
+# T8.1：连不上 Wi-Fi 时才回退热点 SDM01-Setup，配合 captive_portal。
+# 按需才打开热点的做法一期只记录，不实现。
+# 板内串口按电路图：GPIO0 发送，GPIO1 接收，19200、8N1。
+# 绿色 RS485 的 9600 不写进 uart。
+# logger baud_rate 为 0，级别 INFO。
+# 证书日期检查开着，错误时间才会失败。
+# Wi-Fi、API、OTA、云端 Broker 和 CA 用 !secret。这次不带 MQTT 账号。热点不设密码。
+# 正向、反向电能 state_class 为 total_increasing。进出合计不写。不加 multiply。
+# T8.2 只加官方空闲堆传感器。Improv 试过，空闲堆掉得太多，不加。
+
+esphome:
+  name: sdm01-meter
+  comment: T6.3 emqx public 8883
+
+esp32:
+  board: esp32-c3-devkitm-1
+  variant: esp32c3
+  framework:
+    type: esp-idf
+    sdkconfig_options:
+      CONFIG_MBEDTLS_HAVE_TIME_DATE: y
+
+logger:
+  baud_rate: 0
+  level: INFO
+
+api:
+  encryption:
+    key: !secret api_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "SDM01-Setup"
+
+captive_portal:
+
+debug:
+  update_interval: 10s
+
+mqtt:
+  broker: !secret mqtt_cloud_broker
+  port: 8883
+  discovery: false
+  certificate_authority: !secret mqtt_cloud_ca
+
+time:
+  - platform: sntp
+    id: sntp_time
+    servers:
+      - ntp.aliyun.com
+
+uart:
+  id: modbus_uart
+  tx_pin: GPIO0
+  rx_pin: GPIO1
+  baud_rate: 19200
+  data_bits: 8
+  parity: NONE
+  stop_bits: 1
+
+modbus:
+  id: modbus_hub
+  uart_id: modbus_uart
+  role: client
+
+modbus_controller:
+  - id: meter
+    address: 247
+    modbus_id: modbus_hub
+    update_interval: 10s
+
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Voltage A"
+    address: 1000
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: V
+    device_class: voltage
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Voltage B"
+    address: 1002
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: V
+    device_class: voltage
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Voltage C"
+    address: 1004
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: V
+    device_class: voltage
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Current A"
+    address: 1006
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: A
+    device_class: current
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Current B"
+    address: 1008
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: A
+    device_class: current
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Current C"
+    address: 1010
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: A
+    device_class: current
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Active Power A"
+    address: 1012
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kW
+    device_class: power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Active Power B"
+    address: 1014
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kW
+    device_class: power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Active Power C"
+    address: 1016
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kW
+    device_class: power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Reactive Power A"
+    address: 1018
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVAR
+    device_class: reactive_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Reactive Power B"
+    address: 1020
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVAR
+    device_class: reactive_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Reactive Power C"
+    address: 1022
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVAR
+    device_class: reactive_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Apparent Power A"
+    address: 1024
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVA
+    device_class: apparent_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Apparent Power B"
+    address: 1026
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVA
+    device_class: apparent_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Apparent Power C"
+    address: 1028
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVA
+    device_class: apparent_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Power Factor A"
+    address: 1030
+    register_type: holding
+    value_type: FP32
+    device_class: power_factor
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Power Factor B"
+    address: 1032
+    register_type: holding
+    value_type: FP32
+    device_class: power_factor
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Power Factor C"
+    address: 1034
+    register_type: holding
+    value_type: FP32
+    device_class: power_factor
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Average Voltage"
+    address: 1036
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: V
+    device_class: voltage
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Average Current"
+    address: 1038
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: A
+    device_class: current
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Current Unbalance"
+    address: 1040
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: "%"
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Current"
+    address: 1042
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: A
+    device_class: current
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Active Power"
+    address: 1044
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kW
+    device_class: power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Reactive Power"
+    address: 1046
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVAR
+    device_class: reactive_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Apparent Power"
+    address: 1048
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kVA
+    device_class: apparent_power
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Power Factor"
+    address: 1050
+    register_type: holding
+    value_type: FP32
+    device_class: power_factor
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Frequency"
+    address: 1052
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: Hz
+    device_class: frequency
+    state_class: measurement
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Import Energy"
+    address: 1054
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Export Energy"
+    address: 1056
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Total Import and Export Energy"
+    address: 1058
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import Energy A"
+    address: 1060
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Export Energy A"
+    address: 1062
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import and Export Energy A"
+    address: 1064
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import Energy B"
+    address: 1066
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Export Energy B"
+    address: 1068
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import and Export Energy B"
+    address: 1070
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import Energy C"
+    address: 1072
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Export Energy C"
+    address: 1074
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+    state_class: total_increasing
+  - platform: modbus_controller
+    modbus_controller_id: meter
+    name: "Import and Export Energy C"
+    address: 1076
+    register_type: holding
+    value_type: FP32
+    unit_of_measurement: kWh
+    device_class: energy
+  - platform: debug
+    free:
+      name: "Heap Free"

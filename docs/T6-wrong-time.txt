@@ -1,0 +1,342 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.065s
+INFO Successful handshake with sdm01-meter @ <ip> in 1.138s
+[10:18:24.787][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-20 10:17:08 +0800
+[10:18:24.787][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[10:18:24.787][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[10:18:24.787][C][logger:218]: Logger:
+[10:18:24.787][C][logger:218]:   Max Level: DEBUG
+[10:18:24.787][C][logger:218]:   Initial Level: DEBUG
+[10:18:24.794][C][logger:225]:   Log Baud Rate: 0
+[10:18:24.794][C][logger:225]:   Hardware UART: USB_SERIAL_JTAG
+[10:18:24.824][C][logger:234]:   Task Log Buffer Size: 768 bytes
+[10:18:24.825][C][logger:240]:   Level for 'modbus': WARN
+[10:18:24.825][C][logger:240]:   Level for 'modbus_controller': WARN
+[10:18:24.825][C][logger:240]:   Level for 'modbus_controller.sensor': WARN
+[10:18:24.825][C][logger:240]:   Level for 'mqtt.sensor': NONE
+[10:18:24.825][C][logger:240]:   Level for 'sensor': WARN
+[10:18:24.825][C][logger:240]:   Level for 'uart': WARN
+[10:18:25.546][C][network:050]: Network:
+[10:18:25.546][C][network:050]:   TCP send buffer: 5760 bytes
+[10:18:25.554][C][wifi:1688]: WiFi:
+[10:18:25.554][C][wifi:1688]:   Local MAC: <电表MAC>
+[10:18:25.554][C][wifi:1688]:   Connected: YES
+[10:18:25.555][C][wifi:1392]:   IP Address: <ip>
+[10:18:25.555][C][wifi:1403]:   SSID: '<wifi_ssid>'
+[10:18:25.555][C][wifi:1403]:   BSSID: 40:B0:76:39:37:68
+[10:18:25.555][C][wifi:1403]:   Hostname: 'sdm01-meter'
+[10:18:25.555][C][wifi:1403]:   Signal strength: -69 dB ▂▄▆█
+[10:18:25.555][C][wifi:1403]:   Channel: 11
+[10:18:25.555][C][wifi:1403]:   Subnet: <ip>
+[10:18:25.555][C][wifi:1403]:   Gateway: <ip>
+[10:18:25.555][C][wifi:1403]:   DNS1: <ip>
+[10:18:25.555][C][wifi:1403]:   DNS2: <ip>
+[10:18:25.571][C][sntp:058]: SNTP Time:
+[10:18:25.571][C][sntp:061]:   Server 0: '<ip>'
+[10:18:25.579][C][time:051]: Timezone: UTC+8:00
+[10:18:25.579][C][time:055]: Current time: 2026-11-20 10:18:25
+[10:18:25.608][C][esphome.ota:129]: Over-The-Air updates:
+[10:18:25.608][C][esphome.ota:129]:   Address: sdm01-meter.local:3232
+[10:18:25.608][C][esphome.ota:129]:   Version: 2
+[10:18:25.608][C][esphome.ota:129]:   Encryption: offered, plaintext accepted
+[10:18:25.627][C][esphome.ota:153]:   Password configured
+[10:18:25.627][C][safe_mode:058]: Safe Mode:
+[10:18:25.627][C][safe_mode:058]:   Successful after: 60s
+[10:18:25.627][C][safe_mode:058]:   Invoke after: 10 attempts
+[10:18:25.627][C][safe_mode:058]:   Duration: 300s
+[10:18:25.627][C][safe_mode:079]:   Bootloader rollback: supported
+[10:18:25.649][C][api:368]: Server:
+[10:18:25.649][C][api:368]:   Address: sdm01-meter.local:6053
+[10:18:25.649][C][api:368]:   Listen backlog: 4
+[10:18:25.649][C][api:368]:   Max connections: 5
+[10:18:25.649][C][api:375]:   Noise encryption: YES
+[10:18:25.674][C][mqtt:196]: MQTT:
+[10:18:25.674][C][mqtt:196]:   Server Address: <mqtt_broker>:8883 (<mqtt_broker_ip>)
+[10:18:25.674][C][mqtt:196]:   Username: '<mqtt_username>'
+[10:18:25.674][C][mqtt:196]:   Client ID: 'sdm01-meter-<电表MAC>'
+[10:18:25.674][C][mqtt:196]:   Clean Session: NO
+[10:18:25.674][C][mqtt:207]:   Discovery IP enabled
+[10:18:25.678][C][mqtt:215]:   Topic Prefix: 'sdm01-meter'
+[10:18:25.679][C][mqtt:217]:   Log Topic: 'sdm01-meter/debug'
+[10:18:25.679][C][mqtt:220]:   Availability: 'sdm01-meter/status'
+[10:18:25.782][C][mdns:324]: mDNS:
+[10:18:25.782][C][mdns:324]:   Hostname: sdm01-meter
+[10:18:29.095][S][sensor]: 'Voltage A' >> 218 V
+[10:18:29.095][S][sensor]: 'Voltage B' >> 218 V
+[10:18:29.095][S][sensor]: 'Voltage C' >> 218 V
+[10:18:29.095][S][sensor]: 'Current A' >> 7 A
+[10:18:29.095][S][sensor]: 'Current B' >> 7 A
+[10:18:29.095][S][sensor]: 'Current C' >> 7 A
+[10:18:29.095][S][sensor]: 'Active Power A' >> 2 kW
+[10:18:29.095][S][sensor]: 'Active Power B' >> 2 kW
+[10:18:29.096][S][sensor]: 'Active Power C' >> 2 kW
+[10:18:29.096][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:18:29.096][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:18:29.096][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:18:29.096][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:18:29.096][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:18:29.096][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:18:29.096][S][sensor]: 'Power Factor A' >> 1 
+[10:18:29.096][S][sensor]: 'Power Factor B' >> 1 
+[10:18:29.096][S][sensor]: 'Power Factor C' >> 1 
+[10:18:29.096][S][sensor]: 'Average Voltage' >> 218 V
+[10:18:29.096][S][sensor]: 'Average Current' >> 7 A
+[10:18:29.096][S][sensor]: 'Current Unbalance' >> 0 %
+[10:18:29.096][S][sensor]: 'Total Current' >> 21 A
+[10:18:29.096][S][sensor]: 'Total Active Power' >> 5 kW
+[10:18:29.096][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:18:29.096][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:18:29.096][S][sensor]: 'Total Power Factor' >> 1 
+[10:18:29.096][S][sensor]: 'Frequency' >> 50 Hz
+[10:18:29.096][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:18:29.096][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:18:29.097][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:18:29.097][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:18:29.097][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:18:29.097][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:18:29.097][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:18:29.169][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:18:29.169][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:18:29.169][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:18:29.169][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:18:29.169][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:18:39.088][S][sensor]: 'Voltage A' >> 218 V
+[10:18:39.089][S][sensor]: 'Voltage B' >> 219 V
+[10:18:39.089][S][sensor]: 'Voltage C' >> 218 V
+[10:18:39.089][S][sensor]: 'Current A' >> 7 A
+[10:18:39.089][S][sensor]: 'Current B' >> 7 A
+[10:18:39.090][S][sensor]: 'Current C' >> 7 A
+[10:18:39.090][S][sensor]: 'Active Power A' >> 2 kW
+[10:18:39.090][S][sensor]: 'Active Power B' >> 2 kW
+[10:18:39.090][S][sensor]: 'Active Power C' >> 2 kW
+[10:18:39.090][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:18:39.090][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:18:39.090][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:18:39.090][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:18:39.090][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:18:39.090][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:18:39.091][S][sensor]: 'Power Factor A' >> 1 
+[10:18:39.091][S][sensor]: 'Power Factor B' >> 1 
+[10:18:39.091][S][sensor]: 'Power Factor C' >> 1 
+[10:18:39.091][S][sensor]: 'Average Voltage' >> 218 V
+[10:18:39.091][S][sensor]: 'Average Current' >> 7 A
+[10:18:39.091][S][sensor]: 'Current Unbalance' >> 0 %
+[10:18:39.091][S][sensor]: 'Total Current' >> 21 A
+[10:18:39.091][S][sensor]: 'Total Active Power' >> 5 kW
+[10:18:39.091][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:18:39.091][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:18:39.091][S][sensor]: 'Total Power Factor' >> 1 
+[10:18:39.091][S][sensor]: 'Frequency' >> 50 Hz
+[10:18:39.091][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:18:39.091][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:18:39.091][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:18:39.092][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:18:39.092][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:18:39.092][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:18:39.092][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:18:39.128][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:18:39.128][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:18:39.128][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:18:39.128][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:18:39.128][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:18:49.124][S][sensor]: 'Voltage A' >> 219 V
+[10:18:49.124][S][sensor]: 'Voltage B' >> 219 V
+[10:18:49.124][S][sensor]: 'Voltage C' >> 219 V
+[10:18:49.124][S][sensor]: 'Current A' >> 7 A
+[10:18:49.124][S][sensor]: 'Current B' >> 7 A
+[10:18:49.124][S][sensor]: 'Current C' >> 7 A
+[10:18:49.124][S][sensor]: 'Active Power A' >> 2 kW
+[10:18:49.124][S][sensor]: 'Active Power B' >> 2 kW
+[10:18:49.124][S][sensor]: 'Active Power C' >> 2 kW
+[10:18:49.125][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:18:49.125][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:18:49.125][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:18:49.125][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:18:49.125][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:18:49.125][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:18:49.125][S][sensor]: 'Power Factor A' >> 1 
+[10:18:49.125][S][sensor]: 'Power Factor B' >> 1 
+[10:18:49.125][S][sensor]: 'Power Factor C' >> 1 
+[10:18:49.125][S][sensor]: 'Average Voltage' >> 219 V
+[10:18:49.125][S][sensor]: 'Average Current' >> 7 A
+[10:18:49.125][S][sensor]: 'Current Unbalance' >> 0 %
+[10:18:49.125][S][sensor]: 'Total Current' >> 21 A
+[10:18:49.125][S][sensor]: 'Total Active Power' >> 5 kW
+[10:18:49.125][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:18:49.125][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:18:49.125][S][sensor]: 'Total Power Factor' >> 1 
+[10:18:49.125][S][sensor]: 'Frequency' >> 50 Hz
+[10:18:49.125][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:18:49.125][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:18:49.125][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:18:49.126][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:18:49.126][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:18:49.126][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:18:49.126][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:18:49.126][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:18:49.126][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:18:49.126][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:18:49.126][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:18:49.126][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:18:55.353][I][safe_mode:154]: Boot seems successful; resetting boot loop counter
+[10:18:58.788][D][preferences:254]: Writing 1 items: 0 cached, 1 written, 0 failed
+[10:18:59.092][S][sensor]: 'Voltage A' >> 219 V
+[10:18:59.092][S][sensor]: 'Voltage B' >> 220 V
+[10:18:59.092][S][sensor]: 'Voltage C' >> 219 V
+[10:18:59.092][S][sensor]: 'Current A' >> 7 A
+[10:18:59.092][S][sensor]: 'Current B' >> 7 A
+[10:18:59.093][S][sensor]: 'Current C' >> 7 A
+[10:18:59.093][S][sensor]: 'Active Power A' >> 2 kW
+[10:18:59.093][S][sensor]: 'Active Power B' >> 2 kW
+[10:18:59.093][S][sensor]: 'Active Power C' >> 2 kW
+[10:18:59.093][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:18:59.093][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:18:59.093][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:18:59.093][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:18:59.094][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:18:59.094][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:18:59.094][S][sensor]: 'Power Factor A' >> 1 
+[10:18:59.094][S][sensor]: 'Power Factor B' >> 1 
+[10:18:59.094][S][sensor]: 'Power Factor C' >> 1 
+[10:18:59.094][S][sensor]: 'Average Voltage' >> 219 V
+[10:18:59.094][S][sensor]: 'Average Current' >> 7 A
+[10:18:59.094][S][sensor]: 'Current Unbalance' >> 0 %
+[10:18:59.094][S][sensor]: 'Total Current' >> 21 A
+[10:18:59.095][S][sensor]: 'Total Active Power' >> 5 kW
+[10:18:59.095][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:18:59.095][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:18:59.095][S][sensor]: 'Total Power Factor' >> 1 
+[10:18:59.095][S][sensor]: 'Frequency' >> 50 Hz
+[10:18:59.095][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:18:59.095][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:18:59.095][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:18:59.095][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:18:59.095][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:18:59.095][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:18:59.096][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:18:59.103][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:18:59.103][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:18:59.103][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:18:59.103][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:18:59.103][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:19:09.114][S][sensor]: 'Voltage A' >> 219 V
+[10:19:09.114][S][sensor]: 'Voltage B' >> 219 V
+[10:19:09.114][S][sensor]: 'Voltage C' >> 219 V
+[10:19:09.114][S][sensor]: 'Current A' >> 7 A
+[10:19:09.114][S][sensor]: 'Current B' >> 7 A
+[10:19:09.114][S][sensor]: 'Current C' >> 7 A
+[10:19:09.115][S][sensor]: 'Active Power A' >> 2 kW
+[10:19:09.115][S][sensor]: 'Active Power B' >> 2 kW
+[10:19:09.115][S][sensor]: 'Active Power C' >> 2 kW
+[10:19:09.115][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:19:09.115][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:19:09.115][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:19:09.115][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:19:09.115][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:19:09.115][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:19:09.115][S][sensor]: 'Power Factor A' >> 1 
+[10:19:09.115][S][sensor]: 'Power Factor B' >> 1 
+[10:19:09.115][S][sensor]: 'Power Factor C' >> 1 
+[10:19:09.115][S][sensor]: 'Average Voltage' >> 219 V
+[10:19:09.115][S][sensor]: 'Average Current' >> 7 A
+[10:19:09.115][S][sensor]: 'Current Unbalance' >> 0 %
+[10:19:09.116][S][sensor]: 'Total Current' >> 21 A
+[10:19:09.116][S][sensor]: 'Total Active Power' >> 5 kW
+[10:19:09.116][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:19:09.116][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:19:09.116][S][sensor]: 'Total Power Factor' >> 1 
+[10:19:09.116][S][sensor]: 'Frequency' >> 50 Hz
+[10:19:09.116][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:19:09.116][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:19:09.116][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:19:09.116][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:19:09.116][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:19:09.116][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:19:09.116][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:19:09.121][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:19:09.121][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:19:09.121][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:19:09.121][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:19:09.121][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:19:19.110][S][sensor]: 'Voltage A' >> 219 V
+[10:19:19.110][S][sensor]: 'Voltage B' >> 219 V
+[10:19:19.110][S][sensor]: 'Voltage C' >> 219 V
+[10:19:19.110][S][sensor]: 'Current A' >> 7 A
+[10:19:19.110][S][sensor]: 'Current B' >> 7 A
+[10:19:19.110][S][sensor]: 'Current C' >> 7 A
+[10:19:19.110][S][sensor]: 'Active Power A' >> 2 kW
+[10:19:19.110][S][sensor]: 'Active Power B' >> 2 kW
+[10:19:19.110][S][sensor]: 'Active Power C' >> 2 kW
+[10:19:19.111][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:19:19.111][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:19:19.111][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:19:19.111][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:19:19.111][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:19:19.111][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:19:19.111][S][sensor]: 'Power Factor A' >> 1 
+[10:19:19.111][S][sensor]: 'Power Factor B' >> 1 
+[10:19:19.111][S][sensor]: 'Power Factor C' >> 1 
+[10:19:19.111][S][sensor]: 'Average Voltage' >> 219 V
+[10:19:19.111][S][sensor]: 'Average Current' >> 7 A
+[10:19:19.111][S][sensor]: 'Current Unbalance' >> 0 %
+[10:19:19.111][S][sensor]: 'Total Current' >> 21 A
+[10:19:19.111][S][sensor]: 'Total Active Power' >> 5 kW
+[10:19:19.112][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:19:19.112][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:19:19.112][S][sensor]: 'Total Power Factor' >> 1 
+[10:19:19.112][S][sensor]: 'Frequency' >> 50 Hz
+[10:19:19.112][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:19:19.112][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:19:19.112][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:19:19.112][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:19:19.112][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:19:19.112][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:19:19.112][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:19:19.112][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:19:19.112][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:19:19.113][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:19:19.113][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:19:19.113][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:19:29.082][W][component:419]: modbus took a long time for an operation (104 ms), max is 80 ms
+[10:19:29.103][S][sensor]: 'Voltage A' >> 219 V
+[10:19:29.103][S][sensor]: 'Voltage B' >> 219 V
+[10:19:29.103][S][sensor]: 'Voltage C' >> 219 V
+[10:19:29.103][S][sensor]: 'Current A' >> 7 A
+[10:19:29.103][S][sensor]: 'Current B' >> 7 A
+[10:19:29.103][S][sensor]: 'Current C' >> 7 A
+[10:19:29.103][S][sensor]: 'Active Power A' >> 2 kW
+[10:19:29.103][S][sensor]: 'Active Power B' >> 2 kW
+[10:19:29.103][S][sensor]: 'Active Power C' >> 2 kW
+[10:19:29.103][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:19:29.103][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:19:29.103][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:19:29.103][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:19:29.103][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:19:29.103][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:19:29.103][S][sensor]: 'Power Factor A' >> 1 
+[10:19:29.103][S][sensor]: 'Power Factor B' >> 1 
+[10:19:29.103][S][sensor]: 'Power Factor C' >> 1 
+[10:19:29.103][S][sensor]: 'Average Voltage' >> 219 V
+[10:19:29.103][S][sensor]: 'Average Current' >> 7 A
+[10:19:29.104][S][sensor]: 'Current Unbalance' >> 0 %
+[10:19:29.104][S][sensor]: 'Total Current' >> 21 A
+[10:19:29.104][S][sensor]: 'Total Active Power' >> 5 kW
+[10:19:29.104][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:19:29.104][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:19:29.104][S][sensor]: 'Total Power Factor' >> 1 
+[10:19:29.104][S][sensor]: 'Frequency' >> 50 Hz
+[10:19:29.104][S][sensor]: 'Total Import Energy' >> 228 kWh
+[10:19:29.104][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:19:29.104][S][sensor]: 'Total Import and Export Energy' >> 228 kWh
+[10:19:29.104][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:19:29.104][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:19:29.104][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:19:29.104][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:19:29.142][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:19:29.142][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:19:29.143][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:19:29.143][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:19:29.143][S][sensor]: 'Import and Export Energy C' >> 104 kWh

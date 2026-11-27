@@ -1,0 +1,17 @@
+[16:09:06.455][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-26 13:17:53 +0800
+[16:09:06.515][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[16:09:06.518][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[16:16:35.122][W][mqtt:374]: Disconnected: TCP disconnected
+[16:16:35.170][W][component:290]: mqtt set Warning flag: unspecified
+[16:16:35.173][I][esp-idf:000][mqtt_task]: E (1565258) mqtt_client: No PING_RESP, disconnected
+[16:16:35.176][I][mqtt:312]: Connecting
+[16:16:47.071][W][component:313]: mqtt cleared Warning flag
+[16:16:47.133][I][mqtt:353]: Connected
+[16:17:35.031][W][component:419]: modbus took a long time for an operation (112 ms), max is 110 ms
+[16:28:48.979][W][component:419]: modbus took a long time for an operation (3816 ms), max is 120 ms
+[16:30:56.017][W][mqtt:374]: Disconnected: TCP disconnected
+[16:30:56.029][W][component:290]: mqtt set Warning flag: unspecified
+[16:30:56.030][I][esp-idf:000][mqtt_task]: E (2425237) mqtt_client: No PING_RESP, disconnected
+[16:30:56.031][I][mqtt:312]: Connecting
+[16:31:07.555][W][component:313]: mqtt cleared Warning flag
+[16:31:07.855][I][mqtt:353]: Connected

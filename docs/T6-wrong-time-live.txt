@@ -1,0 +1,261 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.367s
+INFO Successful handshake with sdm01-meter @ <ip> in 0.860s
+[10:36:39.226][E][esp32.crash:436]: *** CRASH DETECTED ON PREVIOUS BOOT ***
+[10:36:39.371][E][esp32.crash:441]:   Reason: Task wdt
+[10:36:39.371][E][esp32.crash:443]:   Crashed core: 0
+[10:36:39.372][E][esp32.crash:410]:   Captured by a different firmware build; addresses belong to that build's ELF
+[10:36:39.372][E][esp32.crash:411]:   pc: 0x403833BA
+[10:36:39.372][E][esp32.crash:404]:   bt0: 0x403833BA
+[10:36:39.372][E][esp32.crash:404]:   bt1: 0x403833AA
+[10:36:39.372][E][esp32.crash:404]:   bt2: 0x420B45BC
+[10:36:39.372][E][esp32.crash:404]:   bt3: 0x42006B28
+[10:36:39.372][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-20 10:28:04 +0800
+[10:36:39.372][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[10:36:39.372][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[10:36:39.372][C][logger:218]: Logger:
+[10:36:39.372][C][logger:218]:   Max Level: DEBUG
+[10:36:39.372][C][logger:218]:   Initial Level: DEBUG
+[10:36:39.372][C][logger:225]:   Log Baud Rate: 0
+[10:36:39.372][C][logger:225]:   Hardware UART: USB_SERIAL_JTAG
+[10:36:39.373][C][logger:234]:   Task Log Buffer Size: 768 bytes
+[10:36:39.373][C][logger:240]:   Level for 'modbus': WARN
+[10:36:39.373][C][logger:240]:   Level for 'modbus_controller': WARN
+[10:36:39.373][C][logger:240]:   Level for 'modbus_controller.sensor': WARN
+[10:36:39.373][C][logger:240]:   Level for 'mqtt.sensor': NONE
+[10:36:39.373][C][logger:240]:   Level for 'sensor': NONE
+[10:36:39.373][C][logger:240]:   Level for 'uart': WARN
+[10:36:39.996][C][network:050]: Network:
+[10:36:39.996][C][network:050]:   TCP send buffer: 5760 bytes
+[10:36:39.996][C][wifi:1688]: WiFi:
+[10:36:39.996][C][wifi:1688]:   Local MAC: <电表MAC>
+[10:36:39.996][C][wifi:1688]:   Connected: YES
+[10:36:39.996][C][wifi:1392]:   IP Address: <ip>
+[10:36:39.997][C][wifi:1403]:   SSID: '<wifi_ssid>'
+[10:36:39.997][C][wifi:1403]:   BSSID: 40:B0:76:39:37:68
+[10:36:39.997][C][wifi:1403]:   Hostname: 'sdm01-meter'
+[10:36:39.997][C][wifi:1403]:   Signal strength: -67 dB ▂▄▆█
+[10:36:39.997][C][wifi:1403]:   Channel: 11
+[10:36:39.997][C][wifi:1403]:   Subnet: <ip>
+[10:36:39.997][C][wifi:1403]:   Gateway: <ip>
+[10:36:39.997][C][wifi:1403]:   DNS1: <ip>
+[10:36:39.997][C][wifi:1403]:   DNS2: <ip>
+[10:36:40.014][C][sntp:058]: SNTP Time:
+[10:36:40.014][C][sntp:061]:   Server 0: '<mqtt_broker_ip>'
+[10:36:40.014][C][time:051]: Timezone: UTC+8:00
+[10:36:40.014][C][time:055]: Current time: 2020-06-01 08:03:08
+[10:36:40.180][C][esphome.ota:129]: Over-The-Air updates:
+[10:36:40.180][C][esphome.ota:129]:   Address: sdm01-meter.local:3232
+[10:36:40.180][C][esphome.ota:129]:   Version: 2
+[10:36:40.180][C][esphome.ota:129]:   Encryption: offered, plaintext accepted
+[10:36:40.180][C][esphome.ota:153]:   Password configured
+[10:36:40.180][C][safe_mode:058]: Safe Mode:
+[10:36:40.180][C][safe_mode:058]:   Successful after: 60s
+[10:36:40.180][C][safe_mode:058]:   Invoke after: 10 attempts
+[10:36:40.180][C][safe_mode:058]:   Duration: 300s
+[10:36:40.181][C][safe_mode:079]:   Bootloader rollback: supported
+[10:36:40.336][C][api:368]: Server:
+[10:36:40.336][C][api:368]:   Address: sdm01-meter.local:6053
+[10:36:40.336][C][api:368]:   Listen backlog: 4
+[10:36:40.336][C][api:368]:   Max connections: 5
+[10:36:40.336][C][api:375]:   Noise encryption: YES
+[10:36:40.336][C][mqtt:196]: MQTT:
+[10:36:40.336][C][mqtt:196]:   Server Address: <mqtt_broker>:8883 (<mqtt_broker_ip>)
+[10:36:40.336][C][mqtt:196]:   Username: '<mqtt_username>'
+[10:36:40.336][C][mqtt:196]:   Client ID: 'sdm01-meter-<电表MAC>'
+[10:36:40.336][C][mqtt:196]:   Clean Session: NO
+[10:36:40.337][C][mqtt:207]:   Discovery IP enabled
+[10:36:40.337][C][mqtt:215]:   Topic Prefix: 'sdm01-meter'
+[10:36:40.337][C][mqtt:217]:   Log Topic: 'sdm01-meter/debug'
+[10:36:40.337][C][mqtt:220]:   Availability: 'sdm01-meter/status'
+[10:36:40.337][C][mdns:324]: mDNS:
+[10:36:40.337][C][mdns:324]:   Hostname: sdm01-meter
+[10:36:40.798][S][sensor]: 'Voltage A' >> 220 V
+[10:36:40.799][S][sensor]: 'Voltage B' >> 221 V
+[10:36:40.799][S][sensor]: 'Voltage C' >> 220 V
+[10:36:40.799][S][sensor]: 'Current A' >> 7 A
+[10:36:40.799][S][sensor]: 'Current B' >> 7 A
+[10:36:40.799][S][sensor]: 'Current C' >> 7 A
+[10:36:40.799][S][sensor]: 'Active Power A' >> 2 kW
+[10:36:40.799][S][sensor]: 'Active Power B' >> 2 kW
+[10:36:40.799][S][sensor]: 'Active Power C' >> 2 kW
+[10:36:40.799][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:36:40.799][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:36:40.799][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:36:40.799][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:36:40.799][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:36:40.800][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:36:40.800][S][sensor]: 'Power Factor A' >> 1 
+[10:36:40.800][S][sensor]: 'Power Factor B' >> 1 
+[10:36:40.800][S][sensor]: 'Power Factor C' >> 1 
+[10:36:40.800][S][sensor]: 'Average Voltage' >> 220 V
+[10:36:40.800][S][sensor]: 'Average Current' >> 7 A
+[10:36:40.800][S][sensor]: 'Current Unbalance' >> 0 %
+[10:36:40.800][S][sensor]: 'Total Current' >> 21 A
+[10:36:40.800][S][sensor]: 'Total Active Power' >> 5 kW
+[10:36:40.800][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:36:40.800][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:36:40.800][S][sensor]: 'Total Power Factor' >> 1 
+[10:36:40.800][S][sensor]: 'Frequency' >> 50 Hz
+[10:36:40.800][S][sensor]: 'Total Import Energy' >> 230 kWh
+[10:36:40.800][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:36:40.800][S][sensor]: 'Total Import and Export Energy' >> 230 kWh
+[10:36:40.800][S][sensor]: 'Import Energy A' >> 21 kWh
+[10:36:40.800][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:36:40.800][S][sensor]: 'Import and Export Energy A' >> 21 kWh
+[10:36:40.800][S][sensor]: 'Import Energy B' >> 105 kWh
+[10:36:40.910][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:36:40.911][S][sensor]: 'Import and Export Energy B' >> 105 kWh
+[10:36:40.911][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:36:40.911][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:36:40.911][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:36:50.415][S][sensor]: 'Voltage A' >> 219 V
+[10:36:50.415][S][sensor]: 'Voltage B' >> 220 V
+[10:36:50.415][S][sensor]: 'Voltage C' >> 219 V
+[10:36:50.415][S][sensor]: 'Current A' >> 7 A
+[10:36:50.415][S][sensor]: 'Current B' >> 7 A
+[10:36:50.415][S][sensor]: 'Current C' >> 7 A
+[10:36:50.415][S][sensor]: 'Active Power A' >> 2 kW
+[10:36:50.415][S][sensor]: 'Active Power B' >> 2 kW
+[10:36:50.416][S][sensor]: 'Active Power C' >> 2 kW
+[10:36:50.416][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:36:50.416][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:36:50.416][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:36:50.416][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:36:50.416][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:36:50.416][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:36:50.416][S][sensor]: 'Power Factor A' >> 1 
+[10:36:50.416][S][sensor]: 'Power Factor B' >> 1 
+[10:36:50.416][S][sensor]: 'Power Factor C' >> 1 
+[10:36:50.416][S][sensor]: 'Average Voltage' >> 219 V
+[10:36:50.417][S][sensor]: 'Average Current' >> 7 A
+[10:36:50.417][S][sensor]: 'Current Unbalance' >> 0 %
+[10:36:50.417][S][sensor]: 'Total Current' >> 21 A
+[10:36:50.417][S][sensor]: 'Total Active Power' >> 5 kW
+[10:36:50.417][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:36:50.417][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:36:50.417][S][sensor]: 'Total Power Factor' >> 1 
+[10:36:50.417][S][sensor]: 'Frequency' >> 50 Hz
+[10:36:50.417][S][sensor]: 'Total Import Energy' >> 230 kWh
+[10:36:50.417][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:36:50.417][S][sensor]: 'Total Import and Export Energy' >> 230 kWh
+[10:36:50.417][S][sensor]: 'Import Energy A' >> 21 kWh
+[10:36:50.417][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:36:50.418][S][sensor]: 'Import and Export Energy A' >> 21 kWh
+[10:36:50.418][S][sensor]: 'Import Energy B' >> 105 kWh
+[10:36:50.418][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:36:50.418][S][sensor]: 'Import and Export Energy B' >> 105 kWh
+[10:36:50.418][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:36:50.418][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:36:50.418][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:36:51.825][E][mqtt:171]: MQTT_EVENT_ERROR
+[10:36:51.825][E][mqtt:173]: Last esp-tls error: 0x801a, tls stack error: 0x2700, socket errno: 0 (Success)
+[10:36:51.825][D][esp-idf:000][mqtt_task]: E (234548) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700
+[10:36:51.826][D][esp-idf:000][mqtt_task]: E (234548) esp-tls: Failed to open new connection
+[10:36:51.838][D][esp-idf:000][mqtt_task]: E (234549) transport_base: Failed to open a new connection
+[10:36:51.838][D][esp-idf:000][mqtt_task]: E (234551) mqtt_client: Error transport connect
+[10:36:51.838][W][mqtt:374]: Disconnected: TCP disconnected
+[10:36:51.838][D][mqtt:259]: Resolving broker IP address
+[10:36:52.097][D][mqtt:291]: Resolved broker IP address to <mqtt_broker_ip>
+[10:36:52.098][I][mqtt:312]: Connecting
+[10:37:00.978][S][sensor]: 'Voltage A' >> 220 V
+[10:37:00.978][S][sensor]: 'Voltage B' >> 220 V
+[10:37:00.978][S][sensor]: 'Voltage C' >> 220 V
+[10:37:00.978][S][sensor]: 'Current A' >> 7 A
+[10:37:00.979][S][sensor]: 'Current B' >> 7 A
+[10:37:00.979][S][sensor]: 'Current C' >> 7 A
+[10:37:00.979][S][sensor]: 'Active Power A' >> 2 kW
+[10:37:00.979][S][sensor]: 'Active Power B' >> 2 kW
+[10:37:00.979][S][sensor]: 'Active Power C' >> 2 kW
+[10:37:00.979][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:37:00.979][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:37:00.979][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:37:00.979][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:37:00.979][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:37:00.979][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:37:00.979][S][sensor]: 'Power Factor A' >> 1 
+[10:37:00.979][S][sensor]: 'Power Factor B' >> 1 
+[10:37:00.979][S][sensor]: 'Power Factor C' >> 1 
+[10:37:00.979][S][sensor]: 'Average Voltage' >> 220 V
+[10:37:00.979][S][sensor]: 'Average Current' >> 7 A
+[10:37:00.979][S][sensor]: 'Current Unbalance' >> 0 %
+[10:37:00.979][S][sensor]: 'Total Current' >> 21 A
+[10:37:00.979][S][sensor]: 'Total Active Power' >> 5 kW
+[10:37:00.979][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:37:00.979][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:37:00.979][S][sensor]: 'Total Power Factor' >> 1 
+[10:37:00.979][S][sensor]: 'Frequency' >> 50 Hz
+[10:37:00.980][S][sensor]: 'Total Import Energy' >> 230 kWh
+[10:37:00.980][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:37:00.980][S][sensor]: 'Total Import and Export Energy' >> 230 kWh
+[10:37:00.980][S][sensor]: 'Import Energy A' >> 21 kWh
+[10:37:00.980][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:37:00.980][S][sensor]: 'Import and Export Energy A' >> 21 kWh
+[10:37:00.980][S][sensor]: 'Import Energy B' >> 105 kWh
+[10:37:00.980][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:37:00.980][S][sensor]: 'Import and Export Energy B' >> 105 kWh
+[10:37:00.980][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:37:00.980][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:37:00.980][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:37:06.875][E][mqtt:171]: MQTT_EVENT_ERROR
+[10:37:06.875][E][mqtt:173]: Last esp-tls error: 0x801a, tls stack error: 0x2700, socket errno: 0 (Success)
+[10:37:06.875][D][esp-idf:000][mqtt_task]: E (249654) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700
+[10:37:06.875][D][esp-idf:000][mqtt_task]: E (249655) esp-tls: Failed to open new connection
+[10:37:06.888][D][esp-idf:000][mqtt_task]: E (249655) transport_base: Failed to open a new connection
+[10:37:06.888][D][esp-idf:000][mqtt_task]: E (249656) mqtt_client: Error transport connect
+[10:37:06.888][W][mqtt:374]: Disconnected: TCP disconnected
+[10:37:06.888][D][mqtt:259]: Resolving broker IP address
+[10:37:06.907][D][mqtt:291]: Resolved broker IP address to <mqtt_broker_ip>
+[10:37:07.198][I][mqtt:312]: Connecting
+[10:37:10.388][S][sensor]: 'Voltage A' >> 220 V
+[10:37:10.389][S][sensor]: 'Voltage B' >> 220 V
+[10:37:10.389][S][sensor]: 'Voltage C' >> 220 V
+[10:37:10.389][S][sensor]: 'Current A' >> 7 A
+[10:37:10.389][S][sensor]: 'Current B' >> 7 A
+[10:37:10.389][S][sensor]: 'Current C' >> 7 A
+[10:37:10.389][S][sensor]: 'Active Power A' >> 2 kW
+[10:37:10.389][S][sensor]: 'Active Power B' >> 2 kW
+[10:37:10.390][S][sensor]: 'Active Power C' >> 2 kW
+[10:37:10.390][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:37:10.390][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:37:10.390][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:37:10.390][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:37:10.390][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:37:10.391][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:37:10.391][S][sensor]: 'Power Factor A' >> 1 
+[10:37:10.391][S][sensor]: 'Power Factor B' >> 1 
+[10:37:10.391][S][sensor]: 'Power Factor C' >> 1 
+[10:37:10.391][S][sensor]: 'Average Voltage' >> 220 V
+[10:37:10.391][S][sensor]: 'Average Current' >> 7 A
+[10:37:10.391][S][sensor]: 'Current Unbalance' >> 0 %
+[10:37:10.391][S][sensor]: 'Total Current' >> 21 A
+[10:37:10.391][S][sensor]: 'Total Active Power' >> 5 kW
+[10:37:10.392][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:37:10.392][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:37:10.392][S][sensor]: 'Total Power Factor' >> 1 
+[10:37:10.392][S][sensor]: 'Frequency' >> 50 Hz
+[10:37:10.392][S][sensor]: 'Total Import Energy' >> 230 kWh
+[10:37:10.392][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:37:10.392][S][sensor]: 'Total Import and Export Energy' >> 230 kWh
+[10:37:10.392][S][sensor]: 'Import Energy A' >> 21 kWh
+[10:37:10.393][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:37:10.393][S][sensor]: 'Import and Export Energy A' >> 21 kWh
+[10:37:10.393][S][sensor]: 'Import Energy B' >> 105 kWh
+[10:37:10.408][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:37:10.408][S][sensor]: 'Import and Export Energy B' >> 105 kWh
+[10:37:10.408][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:37:10.408][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:37:10.409][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:37:17.011][E][mqtt:171]: MQTT_EVENT_ERROR
+[10:37:17.012][E][mqtt:173]: Last esp-tls error: 0x801a, tls stack error: 0x2700, socket errno: 0 (Success)
+[10:37:17.012][D][esp-idf:000][mqtt_task]: E (259772) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x2700
+[10:37:17.012][D][esp-idf:000][mqtt_task]: E (259773) esp-tls: Failed to open new connection
+[10:37:17.012][D][esp-idf:000][mqtt_task]: E (259773) transport_base: Failed to open a new connection
+[10:37:17.012][D][esp-idf:000][mqtt_task]: E (259775) mqtt_client: Error transport connect
+[10:37:17.012][W][mqtt:374]: Disconnected: TCP disconnected
+[10:37:17.012][D][mqtt:259]: Resolving broker IP address
+[10:37:17.028][D][mqtt:291]: Resolved broker IP address to <mqtt_broker_ip>
+[10:37:17.038][I][mqtt:312]: Connecting

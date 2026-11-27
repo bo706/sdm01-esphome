@@ -1,0 +1,63 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.133s
+INFO Successful handshake with sdm01-meter @ <ip> in 0.969s
+[18:14:30.871][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-19 18:10:54 +0800
+[18:14:30.871][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[18:14:30.871][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[18:14:30.871][C][logger:218]: Logger:
+[18:14:30.871][C][logger:218]:   Max Level: DEBUG
+[18:14:30.871][C][logger:218]:   Initial Level: DEBUG
+[18:14:30.910][C][logger:225]:   Log Baud Rate: 0
+[18:14:30.910][C][logger:225]:   Hardware UART: USB_SERIAL_JTAG
+[18:14:30.910][C][logger:234]:   Task Log Buffer Size: 768 bytes
+[18:14:30.914][C][uart:349]: UART Bus 0:
+[18:14:30.914][C][uart:131]:   TX Pin: GPIO0
+[18:14:30.914][C][uart:131]:   RX Pin: GPIO1
+[18:14:30.914][C][uart:354]:   RX Buffer Size: 256
+[18:14:30.914][C][uart:354]:   RX Full Threshold: 18
+[18:14:30.914][C][uart:354]:   RX Timeout: 2
+[18:14:30.919][C][uart:366]:   Baud Rate: 19200 baud
+[18:14:30.919][C][uart:366]:   Data Bits: 8
+[18:14:30.919][C][uart:366]:   Parity: NONE
+[18:14:30.919][C][uart:366]:   Stop bits: 1
+[18:14:30.919][C][uart:366]:   Clock Source: APB
+[18:14:30.919][C][uart:366]:   Wake on data RX: ENABLED
+[18:14:30.961][C][modbus:855]: Modbus:
+[18:14:30.961][C][modbus:855]:   Send Wait Time: 2000 ms
+[18:14:30.961][C][modbus:855]:   Turnaround Time: 600 ms
+[18:14:30.961][C][modbus:855]:   Frame Delay: 1823 us
+[18:14:30.961][C][modbus:855]:   Long Rx Buffer Delay: 9376 us
+[18:14:30.961][C][modbus:855]:   Bits Per Character: 10
+[18:14:30.961][C][modbus:855]:   Rx Detect Latency: 1041 us
+[18:14:30.973][C][modbus_controller:534]: ModbusController:
+[18:14:30.973][C][modbus_controller:534]:   Address: 0xF7
+[18:14:30.973][C][modbus_controller:534]:   Max Command Retries: 4
+[18:14:30.973][C][modbus_controller:534]:   Offline Skip Updates: 0
+[18:14:30.999][C][modbus_controller.sensor:017]: modbus_controller.sensorModbus Controller Sensor 'Voltage A'
+[18:14:30.999]modbus_controller.sensor  State Class: 'measurement'
+[18:14:30.999]modbus_controller.sensor  Unit of Measurement: 'V'
+[18:14:30.999]modbus_controller.sensor  Accuracy Decimals: 0
+[18:14:30.999][C][modbus_controller.sensor:166]: modbus_controller.sensor  Device Class: 'voltage'
+[18:14:31.000][C][modbus_controller.sensor:017]: modbus_controller.sensorModbus Controller Sensor 'Voltage B'
+[18:14:31.000]modbus_controller.sensor  State Class: 'measurement'
+[18:14:31.000]modbus_controller.sensor  Unit of Measurement: 'V'
+[18:14:31.000]modbus_controller.sensor  Accuracy Decimals: 0
+[18:14:31.000][C][modbus_controller.sensor:166]: modbus_controller.sensor  Device Class: 'voltage'
+[18:14:31.019][C][modbus_controller.sensor:017]: modbus_controller.sensorModbus Controller Sensor 'Voltage C'
+[18:14:31.019]modbus_controller.sensor  State Class: 'measurement'
+[18:14:31.019]modbus_controller.sensor  Unit of Measurement: 'V'
+[18:14:31.019]modbus_controller.sensor  Accuracy Decimals: 0
+[18:14:31.097][C][modbus_controller.sensor:166]: modbus_controller.sensor  Device Class: 'voltage'
+[18:14:31.098][C][modbus_controller.sensor:017]: modbus_controller.sensorModbus Controller Sensor 'Current A'
+[18:14:31.098]modbus_controller.sensor  State Class: 'measurement'
+[18:14:31.098]modbus_controller.sensor  Unit of Measurement: 'A'
+[18:14:31.098]modbus_controller.sensor  Accuracy Decimals: 0
+[18:14:31.098][C][modbus_controller.sensor:166]: modbus_controller.sensor  Device Class: 'current'
+[18:14:31.102][C][modbus_controller.sensor:017]: modbus_controller.sensorModbus Controller Sensor 'Current B'
+[18:14:31.102]modbus_controller.sensor  State Class: 'measurement'
+[18:14:31.102]modbus_controller.sensor  Unit of Measurement: 'A'
+[18:14:31.102]modbus_controller.sensor  Accuracy Decimals: 0
+[18:15:38.318][C][modbus_controller.sensor:166]: modbus_controller.sensor  Device Class: 'current'

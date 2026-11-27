@@ -1,0 +1,71 @@
+T3.2 2026-11-19 原始记录。两路不一致，停。没有改 FP32_R，没有扫波特率，没有扫地址。
+
+ESPHome 2026.10.2
+compiled on 2026-11-19 11:19:46 +0800
+OTA successful to <电表IP>
+MAC <电表MAC>
+IP <电表IP>
+SSID <2.4GHz网络>
+BSSID 40:B0:76:39:37:68
+Channel 11
+Signal -53 dB
+Logger baud_rate 0, level DEBUG, hardware UART USB_SERIAL_JTAG
+UART TX GPIO21, RX GPIO20, 19200 8N1
+Modbus address 0xF7, send wait 2000 ms
+Sensor Voltage A, holding, address 1000, FP32, unit V, device_class voltage
+
+ESP 日志（同一窗口，没有 Voltage A 状态）：
+[11:38:29.389][W][modbus:096]: Stop waiting for response from 247 2005971us after last send
+[11:38:31.389][W][modbus:096]: Stop waiting for response from 247 2016470us after last send
+[11:38:33.403][W][modbus:096]: Stop waiting for response from 247 2015325us after last send
+[11:38:35.414][W][modbus:096]: Stop waiting for response from 247 2015318us after last send
+[11:38:37.451][W][modbus:096]: Stop waiting for response from 247 2016059us after last send
+[11:38:37.451][D][modbus_controller:085]: Request not sent: function 0x3 register 1000
+[11:38:41.443][W][modbus:096]: Stop waiting for response from 247 2014870us after last send
+[11:38:43.405][W][modbus:096]: Stop waiting for response from 247 2016233us after last send
+[11:38:45.344][W][modbus:096]: Stop waiting for response from 247 2016401us after last send
+[11:38:47.367][W][modbus:096]: Stop waiting for response from 247 2015591us after last send
+[11:38:49.631][W][modbus:096]: Stop waiting for response from 247 2015224us after last send
+[11:38:51.404][W][modbus:096]: Stop waiting for response from 247 2015702us after last send
+[11:38:53.426][W][modbus:096]: Stop waiting for response from 247 2016374us after last send
+[11:38:55.764][W][modbus:096]: Stop waiting for response from 247 2008272us after last send
+[11:38:57.452][W][modbus:096]: Stop waiting for response from 247 2016501us after last send
+[11:38:57.610][D][modbus_controller:085]: Request not sent: function 0x3 register 1000
+
+绿色 RS485：<绿色口> USB-SERIAL CH340，9600 8N1，地址 247，保持寄存器 1000，count 2，大端 FLOAT32。
+2026-11-19T11:38:29.170 REGS [17243, 47709] BE 219.7279815673828 435bba5d
+2026-11-19T11:38:33.199 REGS [17244, 35668] BE 220.54425048828125 435c8b54
+2026-11-19T11:38:37.233 REGS [17244, 43935] BE 220.67039489746094 435cab9f
+2026-11-19T11:38:41.263 REGS [17244, 18340] BE 220.27984619140625 435c47a4
+2026-11-19T11:38:45.292 REGS [17245, 5892] BE 221.08990478515625 435d1704
+2026-11-19T11:38:49.326 REGS [17245, 28867] BE 221.4404754638672 435d70c3
+2026-11-19T11:38:53.356 REGS [17245, 22339] BE 221.3408660888672 435d5743
+2026-11-19T11:38:57.385 REGS [17245, 11262] BE 221.17184448242188 435d2bfe
+
+----
+
+2026-11-19 14:03 按电路图改成 GPIO0 TX、GPIO1 RX 后通过。没有对调。
+compiled on 2026-11-19 14:01:43 +0800
+OTA successful
+TX Pin GPIO0
+RX Pin GPIO1
+Baud Rate 19200
+Address 0xF7
+holding register 1000 FP32
+
+[14:03:52.946] Sensor new state: 219.88
+[14:03:53.060] 'Voltage A' >> 220 V
+[14:04:02.929] Sensor new state: 220.41
+[14:04:03.038] 'Voltage A' >> 220 V
+[14:04:12.920] Sensor new state: 220.29
+[14:04:13.028] 'Voltage A' >> 220 V
+[14:04:22.918] Sensor new state: 221.04
+[14:04:23.017] 'Voltage A' >> 221 V
+
+绿色 RS485 <绿色口> 9600 8N1 地址 247 保持寄存器 1000：
+2026-11-19T14:03:42.183 REGS [17243, 54009] BE 219.82411193847656 435bd2f9
+2026-11-19T14:03:46.221 REGS [17243, 54743] BE 219.83531188964844 435bd5d7
+2026-11-19T14:03:50.260 REGS [17243, 53886] BE 219.82223510742188 435bd27e
+2026-11-19T14:03:54.289 REGS [17244, 35557] BE 220.5425567626953 435c8ae5
+2026-11-19T14:03:58.319 REGS [17243, 55945] BE 219.85365295410156 435bda89
+2026-11-19T14:04:02.348 REGS [17244, 26822] BE 220.40927124023438 435c68c6

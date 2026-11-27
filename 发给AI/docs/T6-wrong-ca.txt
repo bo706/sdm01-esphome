@@ -1,0 +1,71 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.474s
+INFO Successful handshake with sdm01-meter @ <ip> in 0.922s
+[10:06:14.743][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-20 09:47:20 +0800
+[10:06:14.743][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[10:06:14.743][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[10:06:14.743][C][logger:218]: Logger:
+[10:06:14.743][C][logger:218]:   Max Level: DEBUG
+[10:06:14.743][C][logger:218]:   Initial Level: DEBUG
+[10:06:14.743][C][logger:225]:   Log Baud Rate: 0
+[10:06:14.743][C][logger:225]:   Hardware UART: USB_SERIAL_JTAG
+[10:06:14.744][C][logger:234]:   Task Log Buffer Size: 768 bytes
+[10:06:14.744][C][logger:240]:   Level for 'modbus': WARN
+[10:06:14.744][C][logger:240]:   Level for 'modbus_controller': WARN
+[10:06:14.744][C][logger:240]:   Level for 'modbus_controller.sensor': WARN
+[10:06:14.744][C][logger:240]:   Level for 'sensor': WARN
+[10:06:14.744][C][logger:240]:   Level for 'uart': WARN
+[10:06:15.055][S][sensor]: 'Voltage A' >> 221 V
+[10:06:15.055][S][sensor]: 'Voltage B' >> 221 V
+[10:06:15.055][S][sensor]: 'Voltage C' >> 220 V
+[10:06:15.056][S][sensor]: 'Current A' >> 7 A
+[10:06:15.056][S][sensor]: 'Current B' >> 7 A
+[10:06:15.056][S][sensor]: 'Current C' >> 7 A
+[10:06:15.056][S][sensor]: 'Active Power A' >> 2 kW
+[10:06:15.056][S][sensor]: 'Active Power B' >> 2 kW
+[10:06:15.056][S][sensor]: 'Active Power C' >> 2 kW
+[10:06:15.056][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[10:06:15.057][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[10:06:15.057][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[10:06:15.057][S][sensor]: 'Apparent Power A' >> 2 kVA
+[10:06:15.057][S][sensor]: 'Apparent Power B' >> 2 kVA
+[10:06:15.057][S][sensor]: 'Apparent Power C' >> 2 kVA
+[10:06:15.057][S][sensor]: 'Power Factor A' >> 1 
+[10:06:15.057][S][sensor]: 'Power Factor B' >> 1 
+[10:06:15.057][S][sensor]: 'Power Factor C' >> 1 
+[10:06:15.058][S][sensor]: 'Average Voltage' >> 221 V
+[10:06:15.058][S][sensor]: 'Average Current' >> 7 A
+[10:06:15.058][S][sensor]: 'Current Unbalance' >> 0 %
+[10:06:15.058][S][sensor]: 'Total Current' >> 21 A
+[10:06:15.058][S][sensor]: 'Total Active Power' >> 5 kW
+[10:06:15.058][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[10:06:15.058][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[10:06:15.058][S][sensor]: 'Total Power Factor' >> 1 
+[10:06:15.059][S][sensor]: 'Frequency' >> 50 Hz
+[10:06:15.059][S][sensor]: 'Total Import Energy' >> 227 kWh
+[10:06:15.059][S][sensor]: 'Total Export Energy' >> 0 kWh
+[10:06:15.059][S][sensor]: 'Total Import and Export Energy' >> 227 kWh
+[10:06:15.059][S][sensor]: 'Import Energy A' >> 20 kWh
+[10:06:15.059][S][sensor]: 'Export Energy A' >> 0 kWh
+[10:06:15.059][S][sensor]: 'Import and Export Energy A' >> 20 kWh
+[10:06:15.060][S][sensor]: 'Import Energy B' >> 104 kWh
+[10:06:15.071][S][sensor]: 'Export Energy B' >> 0 kWh
+[10:06:15.072][S][sensor]: 'Import and Export Energy B' >> 104 kWh
+[10:06:15.072][S][sensor]: 'Import Energy C' >> 104 kWh
+[10:06:15.072][S][sensor]: 'Export Energy C' >> 0 kWh
+[10:06:15.072][S][sensor]: 'Import and Export Energy C' >> 104 kWh
+[10:06:15.374][C][network:050]: Network:
+[10:06:15.374][C][network:050]:   TCP send buffer: 5760 bytes
+[10:06:15.392][C][wifi:1688]: WiFi:
+[10:06:15.392][C][wifi:1688]:   Local MAC: <电表MAC>
+[10:06:15.392][C][wifi:1688]:   Connected: YES
+[10:06:15.392][C][wifi:1392]:   IP Address: <ip>
+[10:06:15.393][C][wifi:1403]:   SSID: '<wifi_ssid>'
+[10:06:15.393][C][wifi:1403]:   BSSID: 40:B0:76:39:37:68
+[10:06:15.393][C][wifi:1403]:   Hostname: 'sdm01-meter'
+[10:06:15.393][C][wifi:1403]:   Signal strength: -68 dB ▂▄▆█
+[10:06:15.393][C][wifi:1403]:   Channel: 11
+[10:06:15.393][C][wifi:1403]:   Subnet: <ip>

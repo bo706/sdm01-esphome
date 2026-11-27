@@ -1,0 +1,6 @@
+2026-11-26 18:00:38	START ssid=<2.4GHz网络> band=2.4 GHz
+2026-11-26 18:00:39	WIFI_5G_MANUAL
+2026-11-26 18:00:39	LOG_SESSION
+2026-11-26 22:08:26	STOP mqtt silent 15 min
+2026-11-26 22:08:26	LOG_EXIT code=1 seconds=14866 saw_compile=True
+2026-11-26 22:08:28	END ssid=<2.4GHz网络> band=2.4 GHz

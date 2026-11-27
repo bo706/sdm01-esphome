@@ -1,0 +1,73 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.053s
+INFO Successful handshake with sdm01-meter @ <ip> in 0.865s
+[17:50:26.192][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-19 17:45:29 +0800
+[17:50:26.193][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[17:50:26.193][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[17:50:35.612][S][sensor]: 'Voltage A' >> 218 V
+[17:50:35.612][S][sensor]: 'Voltage B' >> 218 V
+[17:50:35.612][S][sensor]: 'Voltage C' >> 218 V
+[17:50:35.612][S][sensor]: 'Current A' >> 7 A
+[17:50:35.612][S][sensor]: 'Current B' >> 7 A
+[17:50:35.612][S][sensor]: 'Current C' >> 7 A
+[17:50:35.612][S][sensor]: 'Active Power A' >> 2 kW
+[17:50:35.612][S][sensor]: 'Active Power B' >> 2 kW
+[17:50:35.612][S][sensor]: 'Active Power C' >> 2 kW
+[17:50:35.612][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[17:50:35.612][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[17:50:35.613][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[17:50:35.613][S][sensor]: 'Apparent Power A' >> 2 kVA
+[17:50:35.613][S][sensor]: 'Apparent Power B' >> 2 kVA
+[17:50:35.613][S][sensor]: 'Apparent Power C' >> 2 kVA
+[17:50:35.613][S][sensor]: 'Power Factor A' >> 1 
+[17:50:35.613][S][sensor]: 'Power Factor B' >> 1 
+[17:50:35.613][S][sensor]: 'Power Factor C' >> 1 
+[17:50:35.613][S][sensor]: 'Average Voltage' >> 218 V
+[17:50:35.613][S][sensor]: 'Average Current' >> 7 A
+[17:50:35.613][S][sensor]: 'Current Unbalance' >> 0 %
+[17:50:35.613][S][sensor]: 'Total Current' >> 21 A
+[17:50:35.613][S][sensor]: 'Total Active Power' >> 5 kW
+[17:50:35.613][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[17:50:35.613][S][sensor]: 'Total Apparent Power' >> 5 kVA
+[17:50:35.613][S][sensor]: 'Total Power Factor' >> 1 
+[17:50:35.614][S][sensor]: 'Frequency' >> 50 Hz
+[17:50:35.614][S][sensor]: 'Total Import Energy' >> 221 kWh
+[17:50:35.614][S][sensor]: 'Total Export Energy' >> 0 kWh
+[17:50:35.614][S][sensor]: 'Total Import and Export Energy' >> 221 kWh
+[17:50:35.614][S][sensor]: 'Import Energy A' >> 18 kWh
+[17:50:35.614][S][sensor]: 'Export Energy A' >> 0 kWh
+[17:50:35.614][S][sensor]: 'Import and Export Energy A' >> 18 kWh
+[17:50:35.614][S][sensor]: 'Import Energy B' >> 102 kWh
+[17:50:35.614][S][sensor]: 'Export Energy B' >> 0 kWh
+[17:50:35.614][S][sensor]: 'Import and Export Energy B' >> 102 kWh
+[17:50:35.614][S][sensor]: 'Import Energy C' >> 102 kWh
+[17:50:35.615][S][sensor]: 'Export Energy C' >> 0 kWh
+[17:50:35.616][S][sensor]: 'Import and Export Energy C' >> 102 kWh
+[17:50:45.383][S][sensor]: 'Voltage A' >> 218 V
+[17:50:45.383][S][sensor]: 'Voltage B' >> 218 V
+[17:50:45.383][S][sensor]: 'Voltage C' >> 217 V
+[17:50:45.384][S][sensor]: 'Current A' >> 7 A
+[17:50:45.384][S][sensor]: 'Current B' >> 7 A
+[17:50:45.384][S][sensor]: 'Current C' >> 7 A
+[17:50:45.384][S][sensor]: 'Active Power A' >> 2 kW
+[17:50:45.384][S][sensor]: 'Active Power B' >> 2 kW
+[17:50:45.384][S][sensor]: 'Active Power C' >> 2 kW
+[17:50:45.384][S][sensor]: 'Reactive Power A' >> 0 kVAR
+[17:50:45.384][S][sensor]: 'Reactive Power B' >> 0 kVAR
+[17:50:45.384][S][sensor]: 'Reactive Power C' >> 0 kVAR
+[17:50:45.384][S][sensor]: 'Apparent Power A' >> 2 kVA
+[17:50:45.384][S][sensor]: 'Apparent Power B' >> 2 kVA
+[17:50:45.384][S][sensor]: 'Apparent Power C' >> 2 kVA
+[17:50:45.384][S][sensor]: 'Power Factor A' >> 1 
+[17:50:45.384][S][sensor]: 'Power Factor B' >> 1 
+[17:50:45.384][S][sensor]: 'Power Factor C' >> 1 
+[17:50:45.384][S][sensor]: 'Average Voltage' >> 217 V
+[17:50:45.384][S][sensor]: 'Average Current' >> 7 A
+[17:50:45.384][S][sensor]: 'Current Unbalance' >> 0 %
+[17:50:45.384][S][sensor]: 'Total Current' >> 21 A
+[17:50:45.384][S][sensor]: 'Total Active Power' >> 5 kW
+[17:50:45.384][S][sensor]: 'Total Reactive Power' >> 0 kVAR
+[17:50:45.384][S][sensor]: 'Total Apparent Power' >> 5 kVA

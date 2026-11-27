@@ -1,0 +1,70 @@
+INFO ESPHome 2026.10.2
+INFO Loaded validated config cache for sdm01-meter.yaml, skipping validation.
+INFO Starting log output from <ip> using esphome API
+INFO Successfully resolved sdm01-meter @ <ip> in 0.000s
+INFO Successfully connected to sdm01-meter @ <ip> in 0.269s
+INFO Successful handshake with sdm01-meter @ <ip> in 1.057s
+[09:46:04.270][E][esp32.crash:436]: *** CRASH DETECTED ON PREVIOUS BOOT ***
+[09:46:04.443][E][esp32.crash:441]:   Reason: Task wdt
+[09:46:04.444][E][esp32.crash:443]:   Crashed core: 0
+[09:46:04.444][E][esp32.crash:410]:   Captured by a different firmware build; addresses belong to that build's ELF
+[09:46:04.444][E][esp32.crash:411]:   pc: 0x403833BA
+[09:46:04.444][E][esp32.crash:404]:   bt0: 0x403833BA
+[09:46:04.444][E][esp32.crash:404]:   bt1: 0x403833AA
+[09:46:04.444][E][esp32.crash:404]:   bt2: 0x420B40B8
+[09:46:04.444][E][esp32.crash:404]:   bt3: 0x42006B28
+[09:46:04.452][I][app:164]: ESPHome version 2026.10.2 compiled on 2026-11-20 09:21:20 +0800
+[09:46:04.452][I][app:171]: ESP32 Chip: ESP32-C3 rev0.4, 1 core(s)
+[09:46:04.452][W][app:189]: Set flash_chip: generic under esp32 > framework > advanced to save IRAM
+[09:46:04.452][C][logger:218]: Logger:
+[09:46:04.452][C][logger:218]:   Max Level: DEBUG
+[09:46:04.452][C][logger:218]:   Initial Level: DEBUG
+[09:46:04.462][C][logger:225]:   Log Baud Rate: 0
+[09:46:04.462][C][logger:225]:   Hardware UART: USB_SERIAL_JTAG
+[09:46:04.462][C][logger:234]:   Task Log Buffer Size: 768 bytes
+[09:46:04.462][C][logger:240]:   Level for 'modbus': WARN
+[09:46:04.462][C][logger:240]:   Level for 'modbus_controller': WARN
+[09:46:04.462][C][logger:240]:   Level for 'modbus_controller.sensor': WARN
+[09:46:04.462][C][logger:240]:   Level for 'sensor': WARN
+[09:46:04.462][C][logger:240]:   Level for 'uart': WARN
+[09:46:05.091][C][network:050]: Network:
+[09:46:05.091][C][network:050]:   TCP send buffer: 5760 bytes
+[09:46:05.124][C][wifi:1688]: WiFi:
+[09:46:05.124][C][wifi:1688]:   Local MAC: <电表MAC>
+[09:46:05.124][C][wifi:1688]:   Connected: YES
+[09:46:05.124][C][wifi:1392]:   IP Address: <ip>
+[09:46:05.124][C][wifi:1403]:   SSID: '<wifi_ssid>'
+[09:46:05.124][C][wifi:1403]:   BSSID: 40:B0:76:39:37:68
+[09:46:05.124][C][wifi:1403]:   Hostname: 'sdm01-meter'
+[09:46:05.124][C][wifi:1403]:   Signal strength: -67 dB ▂▄▆█
+[09:46:05.124][C][wifi:1403]:   Channel: 11
+[09:46:05.124][C][wifi:1403]:   Subnet: <ip>
+[09:46:05.124][C][wifi:1403]:   Gateway: <ip>
+[09:46:05.124][C][wifi:1403]:   DNS1: <ip>
+[09:46:05.124][C][wifi:1403]:   DNS2: <ip>
+[09:46:05.137][C][sntp:058]: SNTP Time:
+[09:46:05.145][C][sntp:061]:   Server 0: 'ntp.aliyun.com'
+[09:46:05.145][C][time:051]: Timezone: UTC+8:00
+[09:46:05.145][C][time:055]: Current time: 2026-11-20 09:46:05
+[09:46:05.181][C][esphome.ota:129]: Over-The-Air updates:
+[09:46:05.181][C][esphome.ota:129]:   Address: sdm01-meter.local:3232
+[09:46:05.181][C][esphome.ota:129]:   Version: 2
+[09:46:05.181][C][esphome.ota:129]:   Encryption: offered, plaintext accepted
+[09:46:05.195][C][esphome.ota:153]:   Password configured
+[09:46:05.195][C][safe_mode:058]: Safe Mode:
+[09:46:05.195][C][safe_mode:058]:   Successful after: 60s
+[09:46:05.195][C][safe_mode:058]:   Invoke after: 10 attempts
+[09:46:05.195][C][safe_mode:058]:   Duration: 300s
+[09:46:05.196][C][safe_mode:079]:   Bootloader rollback: supported
+[09:46:05.244][C][api:368]: Server:
+[09:46:05.244][C][api:368]:   Address: sdm01-meter.local:6053
+[09:46:05.244][C][api:368]:   Listen backlog: 4
+[09:46:05.244][C][api:368]:   Max connections: 5
+[09:46:05.245][C][api:375]:   Noise encryption: YES
+[09:46:05.245][C][mqtt:196]: MQTT:
+[09:46:05.245][C][mqtt:196]:   Server Address: <mqtt_broker>:8883 (<mqtt_broker_ip>)
+[09:46:05.245][C][mqtt:196]:   Username: '<mqtt_username>'
+[09:46:05.245][C][mqtt:196]:   Client ID: 'sdm01-meter-<电表MAC>'
+[09:46:05.245][C][mqtt:196]:   Clean Session: NO
+[09:46:05.246][C][mqtt:207]:   Discovery IP enabled
+[09:46:05.255]
